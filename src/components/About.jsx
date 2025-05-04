@@ -8,8 +8,14 @@ export default function About() {
           <br />
 
           <span className="regular-text">I&apos;m a Full Stack Developer.</span>
+        </p>
 
-          <button className="open-to-work-card">Open to work</button>
+        <p style={{ marginBottom: "30px" }}>
+          I&apos;m a full-stack developer and a DevOps designer building my
+          version of the digital world one step at a time. I love to work in
+          Java, Go/Golang and TypeScript, but I am happy to use whatever tool is
+          most suited for the job at hand. My two favorite daily activities are
+          attending local tech meetups, contributing to open source projects.
         </p>
 
         <div className="my-details-box">
@@ -17,7 +23,22 @@ export default function About() {
             <p>🏠 Phoenix, Arizona.</p>
           </div>
 
-          <div>
+          <div style={{ display: "flex", gap: "20px" }}>
+            <a
+              href="https://drive.google.com/file/d/1YWZzDYWI568fOXXWkKbAWauuX5ivkWhf/view?usp=sharing"
+              className="github-link-tag"
+              target="_blank"
+            >
+              Resume &rarr;
+            </a>
+
+            <a
+              href="https://drive.google.com/drive/folders/1RBVgyBZw0Wq1YqXMSAn1BDM5FT5uVEK5"
+              className="github-link-tag"
+              target="_blank"
+            >
+              Certifications &rarr;
+            </a>
             <a
               href="https://github.com/tarun-veeraraghavan-mv"
               className="github-link-tag"
