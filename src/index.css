@@ -261,6 +261,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
+
+  .project-skill-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 690px) {
