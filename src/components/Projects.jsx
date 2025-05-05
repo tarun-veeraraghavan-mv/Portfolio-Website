@@ -4,7 +4,11 @@ export default function Projects() {
       <p className="title">PROJECTS</p>
 
       <div className="project-container">
-        <img src="../../public/startify-1.png" className="project-img" />
+        <img
+          src="/startify-1.png"
+          className="project-img"
+          alt="Project image"
+        />
 
         <p className="title">Stratify</p>
         <p className="project-content">
@@ -44,7 +48,11 @@ export default function Projects() {
       </div>
 
       <div className="project-container">
-        <img src="../../public/heart-disease-1.png" className="project-img" />
+        <img
+          src="/heart-disease-1.png"
+          alt="Project image"
+          className="project-img"
+        />
 
         <p className="title">Heart Disease Predictor</p>
         <p className="project-content">
