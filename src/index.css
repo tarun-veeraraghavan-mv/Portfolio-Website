@@ -152,6 +152,7 @@ body {
   padding: 20px;
   border: 0.5px solid #eee;
   border-radius: 20px;
+  margin-bottom: 50px;
 }
 
 .project-img {
@@ -181,7 +182,7 @@ body {
 /* CONTACT */
 .contact-box {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 10px;
 }
 
@@ -237,4 +238,41 @@ body {
 .text-content {
   padding: 5px;
   border-radius: 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .simple-flex {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .text-content {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 790px) {
+  .skill-box-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 690px) {
+  .my-details-box {
+    flex-direction: column;
+    gap: 16px; /* Optional: add space between items vertically */
+  }
+}
+
+@media (max-width: 550px) {
+  .skill-box-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }

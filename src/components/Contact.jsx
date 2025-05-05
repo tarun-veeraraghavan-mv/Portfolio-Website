@@ -28,9 +28,20 @@ export default function Contact() {
   }
 
   return (
-    <section>
+    <section id="contact">
       <p className="title">Contact</p>
       <div className="contact-box">
+        <div className="text-content">
+          <p className="margin-bottom-md">
+            Thank you for your interest in getting in touch!
+          </p>
+          <p className="margin-bottom-md">
+            I value open communication and welcome any inquiries, feedback, or
+            collaboration opportunities. Please don&apos;t hesitate to get in
+            touch with me by filling out the contact form.
+          </p>
+          <p>📩 My mail: tarunv1911@gmail.com</p>
+        </div>
         <div>
           <form ref={form} onSubmit={handleSubmit}>
             <div className="simple-flex">
@@ -66,17 +77,6 @@ export default function Contact() {
                 "Email set successfully! We will reach back to you shortly"
               )}
           </form>
-        </div>
-        <div className="text-content">
-          <p className="margin-bottom-md">
-            Thank you for your interest in getting in touch!
-          </p>
-          <p className="margin-bottom-md">
-            I value open communication and welcome any inquiries, feedback, or
-            collaboration opportunities. Please don&apos;t hesitate to get in
-            touch with me by filling out the contact form.
-          </p>
-          <p>📩 My mail: tarunv1911@gmail.com</p>
         </div>
       </div>
     </section>
