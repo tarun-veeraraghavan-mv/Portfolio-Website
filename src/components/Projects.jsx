@@ -67,18 +67,25 @@ export default function Projects() {
         <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
           Links:
           <a
-            href="https://github.com/tarun-veeraraghavan-mv/Heart-Disease-Predictor"
-            className="github-link-tag"
-            target="_blank"
-          >
-            Github &rarr;
-          </a>
-          <a
             href="https://heart-disease-predictor-v1.netlify.app/"
             className="github-link-tag"
             target="_blank"
           >
             Live App &rarr;
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1uuXDWiDkxNa4TvIvRuBGSQn9shw7LH0h/view?usp=sharing"
+            className="github-link-tag"
+            target="_blank"
+          >
+            Demo App &rarr;
+          </a>
+          <a
+            href="https://github.com/tarun-veeraraghavan-mv/Heart-Disease-Predictor"
+            className="github-link-tag"
+            target="_blank"
+          >
+            Github &rarr;
           </a>
         </div>
 
