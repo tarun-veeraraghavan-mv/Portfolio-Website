@@ -78,7 +78,7 @@ export default function Projects() {
             className="github-link-tag"
             target="_blank"
           >
-            Demo App &rarr;
+            Demo Video &rarr;
           </a>
           <a
             href="https://github.com/tarun-veeraraghavan-mv/Heart-Disease-Predictor"
