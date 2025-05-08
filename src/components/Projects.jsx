@@ -22,6 +22,13 @@ export default function Projects() {
         <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
           Links:
           <a
+            href="https://drive.google.com/file/d/1CoUCX3tUduFrlXlwAqAmZ8vnihwm6ipC/view"
+            className="github-link-tag"
+            target="_blank"
+          >
+            Demo Video &rarr;
+          </a>
+          <a
             href="https://github.com/tarun-veeraraghavan-mv/Stratify"
             className="github-link-tag"
             target="_blank"

@@ -25,7 +25,7 @@ export default function About() {
 
           <div style={{ display: "flex", gap: "20px" }}>
             <a
-              href="https://drive.google.com/file/d/1YWZzDYWI568fOXXWkKbAWauuX5ivkWhf/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Gs1uBwk0skr9Et4oJJ0oWA1NdfPh77Xu/view?usp=sharing"
               className="github-link-tag"
               target="_blank"
             >
