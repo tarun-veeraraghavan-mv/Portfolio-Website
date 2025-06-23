@@ -11,10 +11,10 @@ export default function About() {
         </p>
 
         <p style={{ marginBottom: "30px" }}>
-          I&apos;m a full-stack developer and a DevOps designer building my
-          version of the digital world one step at a time. I love to work in
-          Java, Go/Golang and TypeScript, but I am happy to use whatever tool is
-          most suited for the job at hand. My two favorite daily activities are
+          I&apos;m a full-stack developer and a LLM Engineer building my version
+          of the digital world one step at a time. I love to work in Java,
+          Python and TypeScript, but I am happy to use whatever tool is most
+          suited for the job at hand. My two favorite daily activities are
           attending local tech meetups, contributing to open source projects.
         </p>
 
@@ -25,7 +25,7 @@ export default function About() {
 
           <div style={{ display: "flex", gap: "20px" }}>
             <a
-              href="https://drive.google.com/file/d/1Gs1uBwk0skr9Et4oJJ0oWA1NdfPh77Xu/view?usp=sharing"
+              href="https://drive.google.com/file/d/1EIGM4x9PliT5DbWa7In01cXsiu4wIMO6/view?usp=sharing"
               className="github-link-tag"
               target="_blank"
             >

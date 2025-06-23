@@ -5,6 +5,57 @@ export default function Projects() {
 
       <div className="project-container">
         <img
+          src="/quick-tube.png"
+          className="project-img"
+          alt="Project image"
+        />
+
+        <p className="title">QuickTube</p>
+        <p className="project-content">
+          A student-first planner designed to simplify college life. Manage
+          courses, track assignments, set academic goals, and store important
+          files—all in one place. Stay organized, boost productivity, and take
+          control of your studies with an intuitive, distraction-free
+          experience.
+        </p>
+
+        <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
+          Links:
+          <a
+            href="https://drive.google.com/file/d/1CoUCX3tUduFrlXlwAqAmZ8vnihwm6ipC/view"
+            className="github-link-tag"
+            target="_blank"
+          >
+            Demo Video &rarr;
+          </a>
+          <a
+            href="https://github.com/tarun-veeraraghavan-mv/Stratify"
+            className="github-link-tag"
+            target="_blank"
+          >
+            Github &rarr;
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1IwtmqZZxZeMgUa2cu2eVfP4zB-AEoH3v/view?usp=sharing"
+            className="github-link-tag"
+            target="_blank"
+          >
+            DB Diagram &rarr;
+          </a>
+        </div>
+
+        <ul className="project-skill-list">
+          <li className="project-skill-item">Nextjs</li>
+          <li className="project-skill-item">TypeScript</li>
+          <li className="project-skill-item">Spring Boot</li>
+          <li className="project-skill-item">Postgres</li>
+          <li className="project-skill-item">AWS S3</li>
+          <li className="project-skill-item">Terraform</li>
+        </ul>
+      </div>
+
+      <div className="project-container">
+        <img
           src="/startify-1.png"
           className="project-img"
           alt="Project image"
