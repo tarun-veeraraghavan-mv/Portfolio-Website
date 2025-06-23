@@ -21,6 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
+  align-items: center;
 }
 
 .link-box {
@@ -37,6 +38,18 @@ body {
   color: #eee;
   font-weight: 300;
   text-decoration: none;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.link-item:hover {
+  color: #000;
+  background-color: #bbb;
 }
 
 .logo {
@@ -87,23 +100,31 @@ body {
 .my-details-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .github-link-tag {
+  background-color: #333;
   color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s;
 }
 
 .github-link-tag:hover {
-  text-decoration: none;
-  color: white;
+  color: #000;
+  background-color: #bbb;
 }
 
 /* TECH STACK */
 .title {
-  font-size: 20px;
+  font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 40px;
+  font-weight: bold;
 }
 
 .skill-box-out {

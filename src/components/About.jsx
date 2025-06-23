@@ -20,7 +20,7 @@ export default function About() {
 
         <div className="my-details-box">
           <div>
-            <p>🏠 Phoenix, Arizona.</p>
+            <p style={{ fontSize: "18px" }}>🏠 Phoenix, Arizona.</p>
           </div>
 
           <div style={{ display: "flex", gap: "20px" }}>

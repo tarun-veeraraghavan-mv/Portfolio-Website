@@ -8,18 +8,31 @@ export default function Projects() {
           src="/quick-tube.png"
           className="project-img"
           alt="Project image"
+          style={{ marginBottom: "20px" }}
         />
 
         <p className="title">QuickTube</p>
         <p className="project-content">
-          About AI YouTube Summarizer is a full-stack RAG web app that lets
-          users ask questions about any YouTube video and get real-time,
-          intelligent answers. Built with LangChain, Pinecone, and DeepSeek LLM,
-          it uses RAG to generate context-aware responses, supports JWT auth,
-          chat history, and lets users download transcripts via AWS S3.
+          An AI-powered YouTube knowledge extractor — ask any question about a
+          video, and get real-time, context-aware answers. Powered by LangChain
+          + Pinecone + DeepSeek LLM, this full-stack RAG app chunks transcripts,
+          embeds them into a vector DB, and generates intelligent responses on
+          demand.
+        </p>
+        <p className="project-content">
+          Supports JWT auth, persistent chat history, and lets users download
+          full transcripts via AWS S3. Deployed with Terraform for full
+          infra-as-code control.
         </p>
 
-        <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            marginBottom: "30px",
+            alignItems: "center",
+          }}
+        >
           Links:
           <a
             href="https://drive.google.com/file/d/1zucRpNzQs78sCudGpequOUWLi_pnbaCp/view?usp=sharing"
@@ -53,18 +66,25 @@ export default function Projects() {
           src="/ai-code-review.png"
           className="project-img"
           alt="Project image"
+          style={{ marginBottom: "20px" }}
         />
 
         <p className="title">Reviewey</p>
         <p className="project-content">
-          About Reviewey is an AI code review assistant — a full-stack web app
-          that automates code reviews using DeepSeek LLM. Upload your code
-          files, select your language and editor, apply custom code standards,
-          and generate intelligent, downloadable code quality reports — all in
-          one place.
+          AI-powered code review assistant that slashes review time and enforces
+          custom coding standards — all in one click. Upload code files, select
+          your language/editor, and let DeepSeek LLM generate detailed,
+          intelligent quality reports instantly.
         </p>
 
-        <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            marginBottom: "30px",
+            alignItems: "center",
+          }}
+        >
           Links:
           <a
             href="https://drive.google.com/file/d/1Vosmw7GXFgtmHh9cSGoeg_-zSQrJSJKT/view?usp=sharing"
@@ -95,6 +115,7 @@ export default function Projects() {
           src="/startify-1.png"
           className="project-img"
           alt="Project image"
+          style={{ marginBottom: "20px" }}
         />
 
         <p className="title">Stratify</p>
@@ -106,7 +127,14 @@ export default function Projects() {
           experience.
         </p>
 
-        <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            marginBottom: "30px",
+            alignItems: "center",
+          }}
+        >
           Links:
           <a
             href="https://drive.google.com/file/d/1CoUCX3tUduFrlXlwAqAmZ8vnihwm6ipC/view"
@@ -146,6 +174,7 @@ export default function Projects() {
           src="/heart-disease-1.png"
           alt="Project image"
           className="project-img"
+          style={{ marginBottom: "20px" }}
         />
 
         <p className="title">Heart Disease Predictor</p>
@@ -158,7 +187,14 @@ export default function Projects() {
           model evaluation.
         </p>
 
-        <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            marginBottom: "30px",
+            alignItems: "center",
+          }}
+        >
           Links:
           <a
             href="https://drive.google.com/file/d/1uuXDWiDkxNa4TvIvRuBGSQn9shw7LH0h/view?usp=sharing"
