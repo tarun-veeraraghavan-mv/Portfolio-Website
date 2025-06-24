@@ -33,11 +33,11 @@ export default function About() {
             </a>
 
             <a
-              href="https://drive.google.com/drive/folders/1RBVgyBZw0Wq1YqXMSAn1BDM5FT5uVEK5"
+              href="https://www.linkedin.com/in/tarun-v-835509321/?trk=nav_responsive_tab_profile_pic"
               className="github-link-tag"
               target="_blank"
             >
-              Certifications &rarr;
+              Linkedin &rarr;
             </a>
             <a
               href="https://github.com/tarun-veeraraghavan-mv"
@@ -52,3 +52,5 @@ export default function About() {
     </div>
   );
 }
+
+//

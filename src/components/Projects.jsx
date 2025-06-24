@@ -177,7 +177,7 @@ export default function Projects() {
           style={{ marginBottom: "20px" }}
         />
 
-        <p className="title">Heart Disease Predictor</p>
+        <p className="title">CardioRisk AI</p>
         <p className="project-content">
           A full-stack machine learning web application that predicts the risk
           of heart disease based on clinical features such as age, cholesterol,
