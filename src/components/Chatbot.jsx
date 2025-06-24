@@ -6,17 +6,19 @@ export default function Chatbot() {
   const [openModel, setOpenModel] = useState(false);
   const [chatWindow, setChatWindow] = useState(false);
   const [inputText, setInputText] = useState("");
-  const [messages, setMessages] = useState([]); // <-- Stores convo
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
 
   async function callOpenRouter(prompt) {
+    setLoading(true);
     const response = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization:
-            "Bearer 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",
+          Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
           model: "openai/gpt-3.5-turbo-0613",
@@ -33,7 +35,9 @@ export default function Chatbot() {
     );
 
     const data = await response.json();
-    return data.choices[0].message.content;
+    const reply = data.choices[0].message.content;
+    setLoading(false);
+    return reply;
   }
 
   async function getResponse(e) {
@@ -63,7 +67,6 @@ export default function Chatbot() {
       onMouseEnter={() => setOpenModel(true)}
       onMouseLeave={() => setOpenModel(false)}
     >
-      {/* Hover Greeting */}
       {!chatWindow && (
         <p
           style={{
@@ -116,6 +119,12 @@ export default function Chatbot() {
               </div>
             ))}
           </div>
+
+          {loading && (
+            <p>
+              <em>Assisstant is typing...</em>
+            </p>
+          )}
 
           {/* Input */}
           <form onSubmit={getResponse} style={{ display: "flex", gap: "6px" }}>
