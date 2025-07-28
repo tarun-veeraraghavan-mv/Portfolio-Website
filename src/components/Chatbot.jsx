@@ -8,7 +8,7 @@ export default function Chatbot() {
   const [inputText, setInputText] = useState("");
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
-  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
+  const apiKey = import.meta.env.VITE_OPENAI_KEY;
 
   const sendToOpenAI = async () => {
     try {
