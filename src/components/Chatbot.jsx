@@ -10,35 +10,37 @@ export default function Chatbot() {
   const [loading, setLoading] = useState(false);
   const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
 
-  async function callOpenRouter(prompt) {
-    setLoading(true);
-    const response = await fetch(
-      "https://openrouter.ai/api/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: "openai/gpt-3.5-turbo-0613",
-          messages: [
-            {
-              role: "system",
-              content: chatbotPrompt,
-            },
-            { role: "user", content: prompt },
-          ],
-          temperature: 0.7,
-        }),
-      }
-    );
+  const sendToOpenAI = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-4o",
+            messages: [
+              { role: "system", content: chatbotPrompt },
+              { role: "user", content: inputText },
+            ],
+          }),
+        }
+      );
 
-    const data = await response.json();
-    const reply = data.choices[0].message.content;
-    setLoading(false);
-    return reply;
-  }
+      const data = await response.json();
+      const reply = data.choices[0].message.content;
+      return reply;
+    } catch (error) {
+      console.error("❌ Error:", error);
+      alert("API request failed. Check the console.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   async function getResponse(e) {
     e.preventDefault();
@@ -48,7 +50,7 @@ export default function Chatbot() {
     setMessages((prev) => [...prev, userMsg]);
     setInputText("");
 
-    const botResponse = await callOpenRouter(inputText);
+    const botResponse = await sendToOpenAI(inputText);
     const botMsg = { role: "assistant", content: botResponse };
     setMessages((prev) => [...prev, botMsg]);
   }
@@ -82,7 +84,7 @@ export default function Chatbot() {
             transition: "opacity 0.3s ease, visibility 0.3s ease",
           }}
         >
-          Welcome to Tarun's portfolio! Click to ask anything!
+          Welcome to Tarun&lsquo;s portfolio! Click to ask anything!
         </p>
       )}
 
@@ -121,7 +123,7 @@ export default function Chatbot() {
           </div>
 
           {loading && (
-            <p>
+            <p style={{ color: "black" }}>
               <em>Assisstant is typing...</em>
             </p>
           )}

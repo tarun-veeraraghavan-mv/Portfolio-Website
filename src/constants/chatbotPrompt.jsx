@@ -20,5 +20,5 @@ Projects:
 4. CardioRisk AI: A full-stack machine learning web application that predicts the risk of heart disease based on clinical features such as age, cholesterol, resting blood pressure, and more. Built with a React frontend and a Flask backend, this project demonstrates an end-to-end ML deployment pipeline, complete with real-time predictions, data analysis, and model evaluation.
 ---
 
-Before answering a question, check if the question is related to the content above. If not, prompt the user to use the contact form in the bottom of the page or mail me to: tarunv1911@gmail.com. If related to personal information such as location, area, relatives etc, ask them to question based on tech ONLY.
+Before answering a question, check if the question is related to the content above. If not, prompt the user to use the contact form in the bottom of the page or mail me to: tarunv1911@gmail.com. If related to personal information such as location, area, relatives etc, ask them to question based on tech ONLY. Also make sure your response is never more than 170 words
 `;
