@@ -1,4 +1,8 @@
+import { useTheme } from "../context/ThemeContext";
+
 export default function Navbar() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div className="navbar">
       <div>
@@ -11,6 +15,9 @@ export default function Navbar() {
         <a href="#contact" className="link-item">
           Contact
         </a>
+        <button onClick={toggleTheme} className="theme-toggle-btn">
+          {theme === "light" ? "🌙" : "☀️"}
+        </button>
       </div>
     </div>
   );

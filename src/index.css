@@ -1,3 +1,54 @@
+/* Theme Variables */
+:root {
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --primary-color: #333;
+  --primary-text-color: #fff;
+  --secondary-color: #bbb;
+  --secondary-text-color: #000;
+  --logo-color: #333;
+  --intro-text-color: #333;
+  --regular-text-color: #555;
+  --link-bg-color: #333;
+  --link-text-color: #fff;
+  --link-hover-bg-color: #bbb;
+  --link-hover-text-color: #000;
+  --skill-box-border-color: #ccc;
+  --skill-box-hover-bg-color: #ddd;
+  --project-card-bg-color: #fff;
+  --project-card-border-color: #ddd;
+  --modal-content-bg-color: #fff;
+  --modal-content-border-color: #ddd;
+  --input-bg-color: #fff;
+  --input-text-color: #000;
+  --input-border-color: #ccc;
+}
+
+[data-theme='dark'] {
+  --background-color: #000000ea;
+  --text-color: #fff;
+  --primary-color: #333;
+  --primary-text-color: #fff;
+  --secondary-color: #bbb;
+  --secondary-text-color: #000;
+  --logo-color: #ccc;
+  --intro-text-color: #fff;
+  --regular-text-color: #aaa;
+  --link-bg-color: #333;
+  --link-text-color: #fff;
+  --link-hover-bg-color: #bbb;
+  --link-hover-text-color: #000;
+  --skill-box-border-color: #eee;
+  --skill-box-hover-bg-color: #333;
+  --project-card-bg-color: #111;
+  --project-card-border-color: #333;
+  --modal-content-bg-color: #1a1a1a;
+  --modal-content-border-color: #444;
+  --input-bg-color: #222;
+  --input-text-color: #fff;
+  --input-border-color: #444;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +56,11 @@
 }
 
 body {
-  background-color: #000000ea;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: "Roboto";
   scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -32,15 +84,15 @@ body {
 
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .link-item {
   font-size: 18px;
-  color: #eee;
   font-weight: 300;
   text-decoration: none;
-  background-color: #333;
-  color: white;
+  background-color: var(--link-bg-color);
+  color: var(--link-text-color);
   padding: 5px 10px;
   display: inline-block;
   border-radius: 100px;
@@ -49,14 +101,14 @@ body {
 }
 
 .link-item:hover {
-  color: #000;
-  background-color: #bbb;
+  color: var(--link-hover-text-color);
+  background-color: var(--link-hover-bg-color);
 }
 
 .logo {
   font-size: 18px;
   font-weight: bold;
-  color: #ccc;
+  color: var(--logo-color);
   text-transform: uppercase;
   letter-spacing: 2.5px;
 }
@@ -76,13 +128,13 @@ body {
 
 .intro-text {
   font-size: 30px;
-  color: #fff;
+  color: var(--intro-text-color);
   font-weight: 600;
 }
 
 .regular-text {
   font-size: 30px;
-  color: #aaa;
+  color: var(--regular-text-color);
   font-weight: 600;
 }
 
@@ -105,8 +157,8 @@ body {
 }
 
 .github-link-tag {
-  background-color: #333;
-  color: white;
+  background-color: var(--link-bg-color);
+  color: var(--link-text-color);
   padding: 5px 10px;
   display: inline-block;
   border-radius: 100px;
@@ -115,8 +167,8 @@ body {
 }
 
 .github-link-tag:hover {
-  color: #000;
-  background-color: #bbb;
+  color: var(--link-hover-text-color);
+  background-color: var(--link-hover-bg-color);
 }
 
 /* TECH STACK */
@@ -148,7 +200,7 @@ body {
 
 .skill-box {
   padding: 20px 40px;
-  border: 0.5px solid #eee;
+  border: 0.5px solid var(--skill-box-border-color);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -159,7 +211,7 @@ body {
 }
 
 .skill-box:hover {
-  background-color: #333;
+  background-color: var(--skill-box-hover-bg-color);
 }
 
 .skill-icon {
@@ -172,7 +224,7 @@ body {
 
 .project-container {
   padding: 20px;
-  border: 0.5px solid #eee;
+  border: 0.5px solid var(--skill-box-border-color);
   border-radius: 20px;
   margin-bottom: 50px;
 }
@@ -194,7 +246,8 @@ body {
 }
 
 .project-skill-item {
-  background-color: #333;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
   padding: 5px;
   border-radius: 10px;
   text-align: center;
@@ -202,82 +255,81 @@ body {
 }
 
 /* CONTACT */
-.contact-box {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 10px;
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
 }
 
-.contact-img {
-  object-fit: contain;
-  gap: 10px;
+.contact-text-container {
+  flex: 1;
 }
 
-.simple-flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 10px;
+.contact-form-container {
+  flex: 1.5;
 }
 
-.input-small {
-  padding: 10px;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--regular-text-color);
+}
+
+.input-small,
+.input-big {
+  width: 100%;
+  padding: 12px;
   border-radius: 8px;
-  outline: none;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  font-size: 16px;
 }
 
 .input-big {
-  width: 100%;
-  height: 400px;
-  margin-bottom: 10px;
-  outline: none;
-  padding: 10px;
-}
-
-.input-big::placeholder {
-  font-family: "Roboto", sans-serif;
+  height: 150px;
+  resize: vertical;
 }
 
 .input-button {
   font-family: "Roboto";
   width: 100%;
-  padding: 10px;
-  background-color: #333;
-  color: white;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.2s;
 }
 
 .input-button:hover {
-  background-color: #444;
+  background-color: #555;
 }
 
 .margin-bottom-md {
   margin-bottom: 20px;
 }
 
-.text-content {
-  padding: 5px;
-  border-radius: 10px;
+#contact .text-content {
+  padding: 0;
 }
+
 
 /* MEDIA QUERIES */
-@media (max-width: 900px) {
-  .contact-box {
-    grid-template-columns: 1fr;
-  }
-
-  .simple-flex {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .text-content {
-    margin-top: 20px;
-  }
-}
-
 @media (max-width: 790px) {
   .skill-box-list {
     grid-template-columns: repeat(3, 1fr);
@@ -286,6 +338,12 @@ body {
 
   .project-skill-list {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
   }
 }
 
@@ -312,4 +370,120 @@ body {
   background-color: "white";
   border-radius: "100%";
   box-shadow: "0px 4px 12px rgba(0,0,0,0.15)";
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: var(--project-card-bg-color);
+  border: 1px solid var(--project-card-border-color);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card .project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project-card .project-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.learn-more-btn {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.learn-more-btn:hover {
+  background-color: #555;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--modal-content-bg-color);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid var(--modal-content-border-color);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.error-text {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-status-success {
+  color: #7bf1a8;
+  margin-top: 15px;
+}
+
+.form-status-error {
+  color: #ff4d4d;
+  margin-top: 15px;
+}
+
+.input-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
 }
