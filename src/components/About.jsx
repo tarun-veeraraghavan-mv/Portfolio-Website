@@ -3,7 +3,7 @@ export default function About() {
     <div className="about-container">
       <div>
         <p className="opening-box">
-          <span className="intro-text">👋 Hey, I&apos;m Tarun. </span>
+          <span className="intro-text"><span className="waving-hand">👋</span> Hey, I&apos;m Tarun. </span>
 
           <br />
 
